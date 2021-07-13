@@ -1,0 +1,33 @@
+<div class="container">
+
+
+<table class="table table-success table-striped">
+    <thead  >
+      <tr>
+        <th rowspan="2" appDirective scope="col">#</th>
+        <th rowspan="2" appDirective scope="col">Name</th>
+        <th rowspan="2" appDirective scope="col">Email</th>
+        <th colspan="3" appDirective class="text-center"  scope="col">Adress</th>
+        <th rowspan="2" appDirective scope="col">Phone</th>
+        <th rowspan="2" appDirective scope="col">Details</th>
+      </tr>
+      <tr >
+          <th appDirective scope="col">street</th>
+          <th appDirective scope="col"> city</th>
+          <th appDirective scope="col">suite</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr *ngFor="let s of users">
+        <th scope="row">{{s.id}}</th>
+        <td>{{s.name |pipe}}</td>
+        <td>{{s.email|pipe}}</td>
+        <td>{{s.address.street|pipe}}</td>
+        <td>{{s.address.city|pipe}}</td>
+        <td>{{s.address.suite|pipe}}</td>
+        <td>{{s.phone |pipe}}</td>
+        <td> <a routerLink="{{s.id}}"> Details </a> </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,19 @@
+
+<div class="container">
+    <table class="table table-success table-striped justify-center" >
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Details</th>
+            <th scope="col">Updata</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let u of users" [user]="u" app-user-items> </tr>
+        </tbody>
+      </table>
+    </div>

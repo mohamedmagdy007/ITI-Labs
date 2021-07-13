@@ -1,0 +1,17 @@
+
+  <form *ngIf="user ">
+      <h1 class="text-center">update user</h1>
+    <div class="mb-2 w-50 m-auto" >
+        <label for="exampleInputEmail1" class="form-label">Name</label>
+        <input #name type="text"  value="{{ user.name }}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> 
+    </div>
+    <div class="mb-2 w-50 m-auto" >
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input #email type="email" value="{{ user.email }}"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> 
+    </div>
+      <div class="mb-2 w-50 m-auto">
+        <label for="exampleInputPassword1" class="form-label">Phone</label>
+        <input #phone type="text" value="{{ user.phone }}" class="form-control" id="exampleInputPassword1">
+      </div>
+    <button type="submit" class="btn btn-primary m-auto d-block" (click)="updateUser(name.value,email.value,phone.value)">Add</button>
+</form>

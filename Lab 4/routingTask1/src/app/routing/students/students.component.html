@@ -1,0 +1,17 @@
+<div class="container">
+    <form [formGroup] = "ourValidationForm" class="form ">
+        <div class="col-6 mb-3 m-auto">
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input  type="text" class="form-control is-valid" formControlName="name" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="name"  [ngClass]="!nameValid ? 'is-invalid':'is-valid'">
+          <div *ngIf="!nameValid" id="emailHelp" class="form-text"> Name Is Required</div>
+        </div>
+        <div class="col-6 mb-3 m-auto">
+          <label for="exampleInputPassword1" class="form-label">age</label>
+          <input type="number"  formControlName="age" class="form-control"  id="exampleInputPassword1" [(ngModel)]="age" [ngClass]="!ageValid ? 'is-invalid':'is-valid'">
+          <div *ngIf="!ageValid" class="form-text">Age Not Valid</div>
+        </div>
+        <div class="col-6 mb-3 m-auto">
+            <button type="submit" class="btn btn-primary" (click)="add()">Add</button>
+        </div>
+    </form>
+</div>

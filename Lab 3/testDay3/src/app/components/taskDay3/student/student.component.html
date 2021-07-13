@@ -1,0 +1,19 @@
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let d of student; index as i">
+              <td>{{i+1}}</td>
+              <td>{{d.name}}</td>
+              <td>{{d.age}}</td>
+            </tr>
+          </tbody>
+      </table>
+</div>
+

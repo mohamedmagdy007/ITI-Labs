@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="alert alert-info" *ngIf="user;else NoData">
+        <h3>ID: {{user.id}}</h3>
+        <h3>Name: {{user.name}}</h3>
+        <h3>Email: {{user.email}}</h3>
+        <h3>Phones: {{user.phone}}</h3>
+        <h3>website: {{user.website}}</h3>
+        <h3>company:</h3>
+        <ul>
+            <li>name:{{user.company.name}}</li>
+            <li>catchphrase:{{user.company.catchphrase}}</li>
+            <li>bs:{{user.company.bs}}</li>
+        </ul>
+      </div>
+      <ng-template #NoData >
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="spinner-border text-info" role="status" >
+                <span class="sr-only"></span>
+              </div>
+          </div>
+        
+      </ng-template>
+
+</div>

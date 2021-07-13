@@ -1,0 +1,19 @@
+
+
+    <form>
+        <div class="mb-2 w-50 m-auto" >
+            <label for="exampleInputEmail1" class="form-label">Name</label>
+            <input #name type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> 
+        </div>
+        <div class="mb-2 w-50 m-auto" >
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input #email type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> 
+        </div>
+          <div class="mb-2 w-50 m-auto">
+            <label for="exampleInputPassword1" class="form-label">Phone</label>
+            <input #phone type="text" class="form-control" id="exampleInputPassword1">
+          </div>
+        <button type="submit" class="btn btn-primary m-auto d-block" (click)="AddUser(name.value, email.value,phone.value)">Add</button>
+    </form>
+
+

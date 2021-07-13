@@ -1,0 +1,7 @@
+.valid:invalid {
+    border: 2px solid red;
+    }
+    
+    .valid:valid {
+    border: 2px solid green;
+    }

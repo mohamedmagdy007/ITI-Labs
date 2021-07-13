@@ -1,0 +1,28 @@
+<input type="text" placeholder="First Name"  [(ngModel)]="keyword">
+<span>{{keyword}}</span>
+<br>
+<input type="button" value="change" (click)="Add()">
+<hr><hr>
+<div>
+    <input type="text" placeholder="Name" [(ngModel)]="name">
+    <p *ngIf="!nameValid && name !=''">Not Valid Name & Length</p>
+    <input type="number" placeholder="Age" [(ngModel)]="age">
+    <p *ngIf="(age < 18 || age>50) && age !=0 " >Age Not Valid</p>
+    <input type="button" value="Add" (click)="AddNewStudent()">
+</div>
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of students; index as i" >
+          <td>{{i+1}}</td>
+          <td>{{s.name}}</td>
+          <td>{{s.age}}</td>
+        </tr>
+      </tbody>
+  </table>

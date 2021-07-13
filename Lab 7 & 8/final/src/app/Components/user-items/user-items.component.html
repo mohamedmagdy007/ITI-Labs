@@ -1,0 +1,11 @@
+
+   
+            <th scope="row">{{user.id}}</th>
+            <td>{{user.name }}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+            <td> <a routerLink="{{user.id}}"> Details </a> </td>
+            <td> <a routerLink="updata/{{user.id}}"> Updata </a> </td>
+            <td> <button class="btn btn-link" (click)="deleteUser(user.id)"> Delete </button> </td>
+  
+ 
