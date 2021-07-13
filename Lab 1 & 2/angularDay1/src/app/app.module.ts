@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { FirstComponent } from './Compontents/firstCompontent/first.component';
-import { SecondComponent } from './Compontents/second/second.component';
+import { SecondComponent } from './Compontents/slidershow/second.component';
 import { DayTwoComponent } from './Compontents/day-two/day-two.component';
 import { FormsModule } from '@angular/forms';
 
